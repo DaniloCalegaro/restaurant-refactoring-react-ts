@@ -13,7 +13,7 @@ export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }) {
   
   async function handleSubmit () {
 
-    handleAddFood({ name, description, price, image });
+    handleAddFood({ image, name, description, price });
     setIsOpen();
   }
    

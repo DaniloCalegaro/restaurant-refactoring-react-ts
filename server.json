@@ -10,11 +10,11 @@
     },
     {
       "id": 2,
-      "name": "Veggie",
-      "description": "Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.",
-      "price": "21.90",
+      "name": "Novo Prato",
+      "description": "Prato quente",
+      "price": "45",
       "available": true,
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png"
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
     },
     {
       "id": 3,
@@ -23,6 +23,22 @@
       "price": "25.90",
       "available": false,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
+    },
+    {
+      "name": "Teste",
+      "description": "Teste",
+      "price": "9.90",
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
+      "available": true,
+      "id": 4
+    },
+    {
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
+      "name": "Teste Prato ",
+      "description": "Oi, tudo bem!",
+      "price": "41",
+      "available": true,
+      "id": 5
     }
   ]
 }
