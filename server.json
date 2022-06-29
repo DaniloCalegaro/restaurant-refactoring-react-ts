@@ -5,16 +5,16 @@
       "name": "Ao molho",
       "description": "Macarrão ao molho branco, fughi e cheiro verde das montanhas",
       "price": "25.60",
-      "available": false,
+      "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png"
     },
     {
       "id": 2,
-      "name": "Novo Prato",
-      "description": "Prato quente",
-      "price": "45",
+      "name": "Veggie",
+      "description": "Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.",
+      "price": "21.90",
       "available": true,
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png"
     },
     {
       "id": 3,
@@ -25,20 +25,28 @@
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
     },
     {
-      "name": "Teste",
-      "description": "Teste",
-      "price": "9.90",
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png",
+      "name": "Prato teste",
+      "description": "Prato muito bom",
+      "price": "15.75",
       "available": true,
       "id": 4
     },
     {
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
-      "name": "Teste Prato ",
-      "description": "Oi, tudo bem!",
-      "price": "41",
+      "image": "",
+      "name": "Prato teste 5",
+      "description": "Prato muito bom",
+      "price": "5.87",
       "available": true,
       "id": 5
+    },
+    {
+      "name": "Teste",
+      "description": "Ola",
+      "price": "5.70",
+      "image": "",
+      "available": true,
+      "id": 6
     }
   ]
 }

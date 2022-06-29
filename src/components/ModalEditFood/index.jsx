@@ -3,7 +3,7 @@ import { FiCheckSquare } from 'react-icons/fi';
 
 import { Form } from './styles';
 import { Modal } from '../Modal';
-import Input from '../Input';
+import { Input } from '../Input';
 
 export function ModalEditFood ({ isOpen, setIsOpen, editingFood, handleUpdateFood }) {
   const [name, setName] = useState('')
@@ -19,7 +19,7 @@ export function ModalEditFood ({ isOpen, setIsOpen, editingFood, handleUpdateFoo
   },[editingFood])
 
   async function handleSubmit() {
-    const newValuesFood = { name: name, description: description, price: price, image: image };
+    const newValuesFood = { name,  description, price, image };
     handleUpdateFood(newValuesFood);
     setIsOpen();
   }    
