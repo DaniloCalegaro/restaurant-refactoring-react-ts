@@ -1,6 +1,13 @@
+import { ReactNode } from 'react';
 import ReactModal from 'react-modal';
 
-export function Modal ({ isOpen, setIsOpen, children }) {
+interface ModalData {
+  isOpen: boolean
+  setIsOpen: ()=> void
+  children: ReactNode
+}
+
+export function Modal ({ isOpen, setIsOpen, children }: ModalData) {
   return (
     <ReactModal
       shouldCloseOnOverlayClick={!false}

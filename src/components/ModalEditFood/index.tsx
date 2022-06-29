@@ -4,8 +4,16 @@ import { FiCheckSquare } from 'react-icons/fi';
 import { Form } from './styles';
 import { Modal } from '../Modal';
 import { Input } from '../Input';
+import { Foods } from '../../types';
 
-export function ModalEditFood ({ isOpen, setIsOpen, editingFood, handleUpdateFood }) {
+interface TypeModalEditFoodData {
+  isOpen: boolean
+  setIsOpen: () => void
+  editingFood: Foods,
+  handleUpdateFood: (foodEdit: Foods) => void
+}
+
+export function ModalEditFood ({ isOpen, setIsOpen, editingFood, handleUpdateFood } : TypeModalEditFoodData) {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState(0)

@@ -4,8 +4,20 @@ import { FiCheckSquare } from 'react-icons/fi';
 import { Form } from './styles';
 import { Modal }  from '../Modal';
 import { Input } from '../Input';
+import { Foods } from '../../types';
 
-export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }) {
+
+interface ModalAddFoodData {
+  isOpen: boolean;
+  setIsOpen: () => void;
+  handleAddFood: (food: Foods[]) => Promise<void>
+}
+
+type Props = {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }: ModalAddFoodData) {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState(0)
@@ -26,7 +38,7 @@ export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }) {
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <Form onSubmit={handleSubmit}>
         <h1>Novo Prato</h1>
-        <Input 
+        <Input
           name="image" 
           placeholder="Cole o link aqui" 
           onChange={event => setImage(event.target.value)}
