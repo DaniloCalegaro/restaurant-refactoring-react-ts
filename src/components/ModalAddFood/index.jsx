@@ -2,31 +2,17 @@ import { Component, createRef, useState } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
 import { Form } from './styles';
-import { Modal } from '../Modal';
+import { Modal }  from '../Modal';
 import { Input } from '../Input';
 
 export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }) {
-  // const [name, setName] = useState('')
-  // const [description, setDescription] = useState('')
-  // const [price, setPrice] = useState(0)
-  // const [image, setImage] = useState('')
-  const initialState = {
-    name: '',
-    description: '',
-    price: 0,
-    image: '',
-  }
-
-  // analisar este link https://stackoverflow.com/questions/54895883/reset-to-initial-state-with-react-hooks
-
-  const [{ name, description, price, image}, setState] = useState(initialState)
+  const [name, setName] = useState('')
+  const [description, setDescription] = useState('')
+  const [price, setPrice] = useState(0)
+  const [image, setImage] = useState('')
   
   async function handleSubmit () {
-    const newValuesFood = { name,  description, price, image };
-    console.log(newValuesFood)
-    handleAddFood(newValuesFood);
-
-    
+    handleAddFood({ image, name, description, price });
     setIsOpen();
   }
    

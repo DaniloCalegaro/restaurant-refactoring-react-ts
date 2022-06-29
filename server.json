@@ -31,22 +31,6 @@
       "price": "15.75",
       "available": true,
       "id": 4
-    },
-    {
-      "image": "",
-      "name": "Prato teste 5",
-      "description": "Prato muito bom",
-      "price": "5.87",
-      "available": true,
-      "id": 5
-    },
-    {
-      "name": "Teste",
-      "description": "Ola",
-      "price": "5.70",
-      "image": "",
-      "available": true,
-      "id": 6
     }
   ]
 }
