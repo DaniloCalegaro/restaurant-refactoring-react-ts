@@ -1,4 +1,4 @@
-import { Component, createRef, useState } from 'react';
+import { useState } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
 import { Form } from './styles';
@@ -12,7 +12,13 @@ export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }) {
   const [image, setImage] = useState('')
   
   async function handleSubmit () {
-    handleAddFood({ image, name, description, price });
+    if(name !== '') {
+      handleAddFood({ image, name, description, price });
+      setName('')
+      setDescription('')
+      setPrice(0)
+      setImage('')
+    } 
     setIsOpen();
   }
    
