@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
 import { Form } from './styles';
@@ -7,17 +7,13 @@ import { Input } from '../Input';
 import { Foods } from '../../types';
 
 
-interface ModalAddFoodData {
+interface ModalAddFoodProps {
   isOpen: boolean;
   setIsOpen: () => void;
-  handleAddFood: (food: Foods[]) => Promise<void>
+  handleAddFood: (food: Foods) => void
 }
 
-type Props = {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
-
-export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }: ModalAddFoodData) {
+export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }: ModalAddFoodProps) {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState(0)
@@ -41,23 +37,23 @@ export function ModalAddFood( { isOpen, setIsOpen, handleAddFood }: ModalAddFood
         <Input
           name="image" 
           placeholder="Cole o link aqui" 
-          onChange={event => setImage(event.target.value)}
+          onChange={(event: ChangeEvent<HTMLInputElement>) => setImage((event.target.value))}
         />
         <Input 
           name="name" 
           placeholder="Ex: Moda Italiana" 
-          onChange={event => setName(event.target.value)}
+          onChange={(event: ChangeEvent<HTMLInputElement>) => setName(event.target.value)}
         />
         <Input 
           name="price" 
           placeholder="Ex: 19.90" 
-          onChange={event => setPrice(event.target.value)}
+          onChange={(event: ChangeEvent<HTMLInputElement>) => setPrice(Number(event.target.value))}
         />
 
         <Input 
           name="description" 
           placeholder="Descrição" 
-          onChange={event => setDescription(event.target.value)}
+          onChange={(event: ChangeEvent<HTMLInputElement>) => setDescription(event.target.value)}
         />
         <button type="submit" data-testid="add-food-button">
           <p className="text">Adicionar Prato</p>
