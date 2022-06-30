@@ -8,6 +8,15 @@ export default createGlobalStyle`
     outline: 0;
   }
 
+  html {
+    @media (max-width: 1000px) {
+      font-size: 93.75%;
+    }
+    @media (max-width: 720px) {
+      font-size: 87.5%;
+    }
+  }
+
   body {
     background: #fff;
     color: #FFF;
