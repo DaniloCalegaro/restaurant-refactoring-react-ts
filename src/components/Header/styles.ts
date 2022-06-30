@@ -5,9 +5,9 @@ export const Container = styled.div`
   padding: 30px 0;
 
   header {
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 0 160px;
+    padding: 0 20px 160px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,6 +37,15 @@ export const Container = styled.div`
             margin: 0 auto;
           }
         }
+      }
+    }
+  }
+  @media (max-width: 720px) {
+    header {
+      flex-direction: column;
+      
+      nav {
+        margin-top: 25px;
       }
     }
   }

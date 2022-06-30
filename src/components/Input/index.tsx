@@ -8,9 +8,16 @@ import {
 import { useField } from '@unform/core';
 
 import { Container } from './styles';
+import { IconType } from 'react-icons';
+import { Props } from 'react-modal';
 
-const Input = ({ name, icon: Icon, ...rest }) => {
-  const inputRef = useRef(null);
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>{
+  name: string
+  icon?: IconType
+}
+
+export const Input = ({ name, icon: Icon, ...rest }: InputProps) => {
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
@@ -50,4 +57,3 @@ const Input = ({ name, icon: Icon, ...rest }) => {
   );
 };
 
-export default Input;
